@@ -10,11 +10,13 @@ namespace Mock_Cmd
     class Program
     {
 
+        static string PATH = "C:\\Users\\";
+
         static void Main(string[] args)
         {
             Console.Title = "Command Prompt";
             Console.WriteLine("Microsoft Windows [Version 10.0.10586]\n(c) 2015 Microsoft Corporation. All rights reserved.\n");
-            Console.Write("C:\\Users\\" + Environment.UserName + ">");
+            Console.Write(PATH + Environment.UserName + ">");
             Start();
             Process.GetCurrentProcess().WaitForExit();
         }
@@ -27,13 +29,13 @@ namespace Mock_Cmd
                 {
                     Console.Title = "Command Prompt";
                     send_command(Console.ReadLine());
-            }
+                }
                 catch
-            {
-                //null
-            }
+                {
+                    //null
+                }
 
-        }
+            }
         }
 
         static void send_command(string command)
@@ -102,7 +104,7 @@ namespace Mock_Cmd
                         break;
                     }
             }
-            Console.Write("C:\\Users\\" + Environment.UserName + ">");
+            Console.Write(PATH + Environment.UserName + ">");
         }
 
 
