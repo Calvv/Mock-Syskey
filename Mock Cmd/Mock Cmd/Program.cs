@@ -43,6 +43,17 @@ namespace Mock_Cmd
             string[] command_split = command.Split(' ');
             switch (command_split[0])
             {
+                case "ipconfig":
+                    {
+                        Create_Fake_Ipconfig();
+                        break;
+                    }
+                case "IPCONFIG":
+                    {
+                        Create_Fake_Ipconfig();
+                        break;
+                    }
+
                 case "netstat":
                     {
                         Console.Title = "Command Prompt - netstat";
@@ -98,6 +109,11 @@ namespace Mock_Cmd
                         Console.WriteLine(command_split[1]);
                         break;
                     }
+                case "exit":
+                    {
+                        Environment.Exit(0);
+                        break;
+                    }
                 default:
                     {
                         Console.WriteLine("'" + command + "'" + " is not recognized as an internal or external command,\noperable program or batch file.\n");
@@ -119,13 +135,22 @@ namespace Mock_Cmd
                 ,"├───Pics","├───Indian Phone Scammers","├───Errors","├───Private","│   ├───Indian","│   ├───Ebony",
             "│   │   └───Minecraft Roleplay","│   ├───Huge black c***s","│   └───Homosexual","├───Movies","├───redist","│   └───miles","├───replay",
                 "├───Southpark","│   ├───Season 09","│   └───Season 08","└───support","│   ├───Technical support","│   ├───Images",
+            "│   │   ├───Cute indian","│   │   └───Nawwwwwwwwwww","│   ├───Photos","│   ├───Readme","│   ├───Support","│   └───Radio","└───Youtube","├───Pics","├───Indian Phone Scammers","├───Errors","├───Private","│   ├───Indian","│   ├───Ebony",
+            "│   │   └───Minecraft Roleplay","│   ├───Huge black c***s","│   └───Homosexual","├───Movies","├───redist","│   └───miles","├───replay",
+                "├───Southpark","│   ├───Season 09","│   └───Season 08","└───support","│   ├───Technical support","│   ├───Images",
+            "│   │   ├───Cute indian","│   │   └───Nawwwwwwwwwww","│   ├───Photos","│   ├───Readme","│   ├───Support","│   └───Radio","└───Youtube","├───Pics","├───Indian Phone Scammers","├───Errors","├───Private","│   ├───Indian","│   ├───Ebony",
+            "│   │   └───Minecraft Roleplay","│   ├───Huge black c***s","│   └───Homosexual","├───Movies","├───redist","│   └───miles","├───replay",
+                "├───Southpark","│   ├───Season 09","│   └───Season 08","└───support","│   ├───Technical support","│   ├───Images",
+            "│   │   ├───Cute indian","│   │   └───Nawwwwwwwwwww","│   ├───Photos","│   ├───Readme","│   ├───Support","│   └───Radio","└───Youtube","├───Pics","├───Indian Phone Scammers","├───Errors","├───Private","│   ├───Indian","│   ├───Ebony",
+            "│   │   └───Minecraft Roleplay","│   ├───Huge black c***s","│   └───Homosexual","├───Movies","├───redist","│   └───miles","├───replay",
+                "├───Southpark","│   ├───Season 09","│   └───Season 08","└───support","│   ├───Technical support","│   ├───Images",
             "│   │   ├───Cute indian","│   │   └───Nawwwwwwwwwww","│   ├───Photos","│   ├───Readme","│   ├───Support","│   └───Radio","└───Youtube","\n",
             "   ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄", "   ▌SCAN COMPLETED, NO VIRUS FOUND.▌","   ▌YOUR COMPUTER IS 100% CLEAN    ▌" , "   ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n"};
 
             for(int i = 0; i <= Messages.Length - 1; i++)
             {
                 Console.WriteLine(Messages[i]);
-                System.Threading.Thread.Sleep(25);
+                System.Threading.Thread.Sleep(19);
             }
         }
         static void Create_Fake_Netstat_scan()
@@ -143,6 +168,25 @@ namespace Mock_Cmd
             {
                 Console.WriteLine(Messages[i]);
                 System.Threading.Thread.Sleep(540);
+            }
+        }
+        static void Create_Fake_Ipconfig()
+        {
+            string[] Messages = {"\nWindows IP Configuration\n",
+            "Ethernet adapter Ethernet 1:",
+            "\n",
+            "   Connection-specific DNS Suffix  . :",
+            "   Link-local IPv6 Address . . . . . : fe42::fd21:86dd:5323:d3e1%4",
+            "   IPv4 Address. . . . . . . . . . . : 192.168.1.109",
+            "   Subnet Mask . . . . . . . . . . . : 255.255.255.0",
+            "   Default Gateway . . . . . . . . . : 192.168.1.1\n",
+            "Your firewall is active & your computer is protected from malware and virus.\n"
+            };
+
+            for (int i = 0; i <= Messages.Length - 1; i++)
+            {
+                Console.WriteLine(Messages[i]);
+                System.Threading.Thread.Sleep(15);
             }
         }
     }
