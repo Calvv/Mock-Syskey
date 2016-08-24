@@ -5,6 +5,14 @@ using System.Runtime.InteropServices;
 using System.Threading;
 
 
+//#######################################
+//#######################################
+//##                                   ##             
+//## CREDITS: Calvv @github.com/calvv  ##
+//##                                   ##
+//#######################################
+//#######################################
+
 namespace Mock_Cmd
 {
     class Program
